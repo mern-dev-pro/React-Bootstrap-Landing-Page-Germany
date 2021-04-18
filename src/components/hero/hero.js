@@ -139,7 +139,7 @@ function Hero() {
                                 </div>
                             </Slider>
                             <div className="my-2">
-                                <div className="d-flex align-items-center">
+                                <div className="d-flex align-items-center" style={{justifyContent: tablet?"center":"left"}}>
                                     <Image style={{cursor:"pointer"}} src={PrevIcon} onClick={()=>{setActiveslide(activeslide - 1); slide.slickGoTo(activeslide)}}/>
                                     <div style={{cursor:"pointer"}} onClick={()=>{setActiveslide(1); slide.slickGoTo(0)}}>
                                         <p className="position-absolute text-white hero-bottom-text" style={{marginLeft:"10px", marginTop:'5px'}}>01</p>
