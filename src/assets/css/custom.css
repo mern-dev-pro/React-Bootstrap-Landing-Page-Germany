@@ -1,0 +1,148 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("../font//Montserrat//Montserrat-Medium.ttf");
+}
+.header-root{
+    background-color: #212E3E;
+    height: 100px;
+}
+.nav-link-text{
+    font-family: "Montserrat";
+    font-size: 18px;
+}
+
+.header-logo-title{
+    font-family: "Montserrat";
+    font-size: 30px;
+    color: white;
+}
+.custom-button{
+    border-radius: 2rem;
+    background-color: #FF0F50;
+    padding: 7px 15px;
+    border:none;
+    color: white;
+
+}
+.hero-root{
+    background-color: #131218;
+    background-image: url('../img/background//bg_1.png');
+    background-repeat: no-repeat;
+    padding-top: 100px;
+}
+.hero-title-extra{
+    font-family: 'Montserrat';
+    font-size: 65px;
+}
+.hero-title{
+    font-family: 'Montserrat';
+    font-size: 44px;
+}
+.hero-movie-card{
+    border: #FF0F50 solid 2px;
+    border-radius: 5px;
+}
+.hero-movie-overlay-1{
+    top: 0;
+    z-index: 5;
+    background-image: url("../img//background//Background\ Movie\ Center.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,1)); */
+}
+.hero-movie-overlay-2{
+    top: 0;
+    z-index: 5;
+    background-image: url("../img//background/Background\ Movie\ Righ.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,1)); */
+}
+.hero-moviecard-top-badge{
+    background-color: #FF0F50;
+    width: 60px;
+    height: 28px;
+    border-radius: 5px;
+}
+.hero-moviecard-top-badge{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    align-self: center;
+}
+.hero-moviecard-top-play-button{
+    width: 60px;
+    height: 60px;
+    background-color: #ffffffaa;
+    border-radius: 50%;
+}
+.hero-moviecard-title{
+    font-size: 18px;
+    font-family: "Montserrat";
+}
+.hero-bottom-title{
+    font-size: 22px;
+    font-family: "Montserrat";
+}
+.hero-bottom-text{
+    font-size: 18px;
+    font-family: "Montserrat";
+}
+.hero-moviecard-text{
+    font-size: 10px;
+    font-family: "Montserrat";
+}
+.hero-botto-icon{
+    background-color: #FF0F50;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.hero-botto-icon-img{
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.medium-root{
+    background-color: #131218;
+}
+.medium-title{
+    font-size: 44px;
+    font-family: "Montserrat";
+}
+.medium-text{
+    font-size:16px;
+    font-family: "Montserrat";
+}
+.lastest-live-gams{
+    background-image: url('../img/background/1247841.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.lastest-live-gams-text{
+    font-size:12px;
+    font-family: "Montserrat";
+}
+.lastest-live-gams-text-red{
+    font-size:16px;
+    font-family: "Montserrat";
+    color: #FF0F50;
+    font-weight: bold;
+}
+.number-text{
+    font-size:49px;
+    font-family: "Montserrat";
+    font-weight: bold;
+}
+.footer-root{
+    background-color:#212E3E;
+}
+@media only screen and (max-width: 1025px) {
+    .hero-title-extra{
+        font-family: 'Montserrat';
+        font-size: 50px;
+    }
+    .hero-title{
+        font-family: 'Montserrat';
+        font-size: 34px;
+    }
+}
