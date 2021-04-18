@@ -4,7 +4,7 @@
 }
 .header-root{
     background-color: #212E3E;
-    height: 100px;
+    /* height: 100px; */
 }
 .nav-link-text{
     font-family: "Montserrat";
@@ -136,6 +136,10 @@
 }
 .footer-root{
     background-color:#212E3E;
+}
+.dropdown-menu{
+    margin-top: 10px !important;
+    background-color: #212E3E !important;
 }
 @media only screen and (max-width: 1025px) {
     .hero-title-extra{

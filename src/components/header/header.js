@@ -1,9 +1,22 @@
 import React from 'react'
-import { Container, Image, Nav, Navbar } from 'react-bootstrap'
+import { Container, Image, Nav, Navbar, Dropdown } from 'react-bootstrap'
 import useMediaQuery from "use-mediaquery";
 
 import LogoImage from '../../assets/img/brand/LayzrLogo.png'
 import DropdownIcon from '../../assets/img/icon/menu.png'
+
+const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
+    <a
+      href=""
+      ref={ref}
+      onClick={(e) => {
+        e.preventDefault();
+        onClick(e);
+      }}
+    >
+      {children}
+    </a>
+));
 
 function Header(props) {
     const desktop = useMediaQuery("(min-width: 1025px)");
@@ -44,7 +57,16 @@ function Header(props) {
                                 <Navbar.Collapse className="justify-content-end">
                                     <Nav.Link className="nav-link-text text-white"><button className="custom-button">Contact Us</button> </Nav.Link>
                                     <Nav.Link>
-                                        <Image src={DropdownIcon} width={50}></Image>
+                                        <Dropdown>
+                                            <Dropdown.Toggle as={CustomToggle} variant="success" id="dropdown-basic">
+                                                <Image src={DropdownIcon} width={50}></Image>                                               
+                                            </Dropdown.Toggle>
+                                            <Dropdown.Menu alignRight className="dropdown-menu">
+                                                <Dropdown.Item href="#/action-1" className="text-white">Home</Dropdown.Item>
+                                                <Dropdown.Item href="#/action-2" className="text-white">How Dose LayzrTV Work</Dropdown.Item>
+                                                <Dropdown.Item href="#/action-3" className="text-white">FAQ</Dropdown.Item>
+                                            </Dropdown.Menu>
+                                        </Dropdown>
                                     </Nav.Link>
                                 </Navbar.Collapse>
                             </Navbar>
@@ -60,7 +82,17 @@ function Header(props) {
                                 <Navbar.Toggle />
                                 <Navbar.Collapse className="justify-content-end">
                                     <Nav.Link>
-                                        <Image src={DropdownIcon} width={50}></Image>
+                                        <Dropdown>
+                                            <Dropdown.Toggle as={CustomToggle} variant="success" id="dropdown-basic">
+                                                <Image src={DropdownIcon} width={50}></Image>                                               
+                                            </Dropdown.Toggle>
+                                            <Dropdown.Menu alignRight className="dropdown-menu">
+                                                <Dropdown.Item href="#/action-1" className="text-white">Home</Dropdown.Item>
+                                                <Dropdown.Item href="#/action-2" className="text-white">How Dose LayzrTV Work</Dropdown.Item>
+                                                <Dropdown.Item href="#/action-3" className="text-white">FAQ</Dropdown.Item>
+                                                <Dropdown.Item href="#/action-3" className="text-white">Contact Us</Dropdown.Item>
+                                            </Dropdown.Menu>
+                                        </Dropdown>
                                     </Nav.Link>
                                 </Navbar.Collapse>
                             </Navbar>
