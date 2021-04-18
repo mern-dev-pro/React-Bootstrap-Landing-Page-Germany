@@ -10,6 +10,8 @@ import Image3 from '../../assets/img/background/best gaming wallpapers for pc.pn
 import Icon1 from '../../assets/img/icon/surface1.png'
 import Icon2 from '../../assets/img/icon/Group 16.png'
 import Icon3 from '../../assets/img/icon/Group 33.png'
+import ActivepageNationIcon from '../../assets/img/icon/Path 4.png'
+import PageNationIcon from '../../assets/img/icon/Path 5.png'
 
 function Medium() {
     const desktop = useMediaQuery("(min-width: 1025px)");
@@ -25,6 +27,8 @@ function Medium() {
         arrows:false
     };
 
+    const [slide, setSlide] = React.useState()
+    const[activeslide, setActiveslide] = React.useState(0)
 
     return (
         <div className="medium-root">
@@ -98,8 +102,8 @@ function Medium() {
                             </Row>
                     }
                     {
-                        tablet&&
-                            <Slider {...settings}>
+                        tablet&&<>
+                            <Slider {...settings} ref={slider => (setSlide(slider))}>
                                 <div>
                                     <Image src={Image1} className="w-100  mt-5"></Image>
                                     <div className="my-3">
@@ -143,6 +147,23 @@ function Medium() {
                                     </div>
                                 </div>
                             </Slider>
+                            <div>
+                                <div className="d-flex justify-content-center align-items-center">
+                                    <div style={{cursor:"pointer"}} onClick={()=>{setActiveslide(1); slide.slickGoTo(0)}}>
+                                        <p className="position-absolute text-white hero-bottom-text" style={{marginLeft:"10px", marginTop:'5px'}}>01</p>
+                                        <Image src={(activeslide == 1)?ActivepageNationIcon:PageNationIcon}/>
+                                    </div>
+                                    <div style={{cursor:"pointer"}} onClick={()=>{setActiveslide(2); slide.slickGoTo(1)}}>
+                                        <p className="position-absolute text-white hero-bottom-text" style={{marginLeft:"10px", marginTop:'5px'}}>02</p>
+                                        <Image src={(activeslide == 2)?ActivepageNationIcon:PageNationIcon}/>
+                                    </div>
+                                    <div style={{cursor:"pointer"}} onClick={()=>{setActiveslide(3); slide.slickGoTo(2)}}>
+                                        <p className="position-absolute text-white hero-bottom-text" style={{marginLeft:"10px", marginTop:'5px'}}>03</p>
+                                        <Image src={(activeslide ==3)?ActivepageNationIcon:PageNationIcon}/>
+                                    </div>
+                                </div>
+                            </div>
+                            </>
                     }
                 </Container>
             </div>
