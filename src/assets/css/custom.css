@@ -28,6 +28,7 @@
     background-color: #131218;
     background-image: url('../img/background//bg_1.png');
     background-repeat: no-repeat;
+    background-size: 100% 100%;
     padding-top: 100px;
 }
 .hero-title-extra{
